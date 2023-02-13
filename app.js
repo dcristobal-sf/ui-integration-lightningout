@@ -21,9 +21,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/home', routesHome);
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors({origin: '*'}));
 
 app.set('view engine', 'ejs');
 
