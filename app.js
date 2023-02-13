@@ -1,6 +1,7 @@
 var nforce = require('nforce');
 var express = require('express');
 var port = process.env.PORT || 3000;
+const cors = require('cors');
 
 var org = nforce.createConnection({
   clientId: process.env.CONSUMER_KEY,
@@ -13,9 +14,7 @@ var org = nforce.createConnection({
 
 var app = express();
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 
 // Require Routes js
 var routesHome = require('./routes/home');
