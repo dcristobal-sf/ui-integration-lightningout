@@ -13,6 +13,8 @@ var org = nforce.createConnection({
 
 var app = express();
 
+app.use(cors());
+
 // Require Routes js
 var routesHome = require('./routes/home');
 
