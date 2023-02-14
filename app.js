@@ -14,12 +14,12 @@ var org = nforce.createConnection({
 
 var app = express();
 
+// Require Routes js
+var routesHome = require('./routes/home');
+
 app.use(cors({
     origin: '*'
 }));
-
-// Require Routes js
-var routesHome = require('./routes/home');
 
 // Serve static files
 app.use(express.static(__dirname + '/public'));
