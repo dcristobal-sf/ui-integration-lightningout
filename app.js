@@ -1,7 +1,7 @@
 var nforce = require('nforce');
 var express = require('express');
 var port = process.env.PORT || 3000;
-const cors = require('cors');
+var cors = require('cors');
 
 var org = nforce.createConnection({
   clientId: process.env.CONSUMER_KEY,
