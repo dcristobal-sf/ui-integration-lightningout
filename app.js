@@ -14,12 +14,12 @@ var org = nforce.createConnection({
 
 var app = express();
 
+app.use(cors({
+    origin: '*'
+}));
+
 // Require Routes js
 var routesHome = require('./routes/home');
-
-app.use(cors({
-    origin: ['https://dcristobal-20210817-demo.lightning.force.com']
-}));
 
 // Serve static files
 app.use(express.static(__dirname + '/public'));
